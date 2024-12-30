@@ -33,7 +33,7 @@
         }
 
         header.scrolled {
-            background: rgb(238, 191, 191, 0.8);
+            background: rgb(246, 236, 252, 1);
             /* New color on scroll */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
             /* Adds shadow */
@@ -94,6 +94,41 @@
             opacity: 0.8;
         }
 
+        .logo img {
+            width: 200px;
+            /* Adjust this as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+            max-width: 140%;
+            /* Make it responsive */
+            margin-left: 10px;
+
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 15px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container input {
+            border: none;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .search-container i {
+            color: #888;
+            margin-left: 10px;
+        }
+
+
         /* Content and Place Grid */
         .content {
             margin: 20px;
@@ -152,39 +187,6 @@
 
 
 
-        .logo img {
-            width: 200px;
-            /* Adjust this as needed */
-            height: auto;
-            /* Maintain aspect ratio */
-            max-width: 140%;
-            /* Make it responsive */
-            margin-left: 10px;
-
-        }
-        .search-container {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            padding: 5px 15px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .search-container input {
-            border: none;
-            outline: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .search-container i {
-            color: #888;
-            margin-left: 10px;
-        }
 
     </style>
 </head>
@@ -199,8 +201,8 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="actions">
-            <button class="review" onclick="location.href='write-review.html'">Write a Review</button>
-            <button class="plan">Plan Your Trip</button>
+            <button class="review" onclick="location.href='select-place.html'">Write a Review</button>
+            <button class="plan" onclick="location.href='plan-trip.html'">Plan Your Trip</button>
             <button class="login">Login</button>
             <button class="register">Register</button>
         </div>
