@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a30fc797a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
     <title>Travel Suggestions & Reviews</title>
     <style>
         /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Montserrat, sans-serif;
             background: url('img/bg4.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 2000px;
@@ -53,12 +56,16 @@
             background-color: #fefffe;
             padding: 10px 15px;
             color: #112c2d;
+            font-family: Montserrat, sans-serif;
+            cursor: pointer;
         }
 
         .actions .register {
             background-color: #faa935;
             padding: 10px 15px;
             color: white;
+            font-family: Montserrat, sans-serif;
+            cursor: pointer;
         }
 
         .actions .login:hover,
@@ -73,6 +80,8 @@
             color: white;
             padding: 0px 5px;
             font-size: 18px;
+            font-family: Montserrat, sans-serif;
+            cursor: pointer;
         }
 
         .actions .plan {
@@ -153,19 +162,44 @@
             margin-left: 10px;
 
         }
+        .search-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 15px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container input {
+            border: none;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .search-container i {
+            color: #888;
+            margin-left: 10px;
+        }
+
     </style>
 </head>
 
 <body>
     <header class="custom-header">
-        <div class="logo">
+        <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
             <img src="img/logo.png" alt="Company Logo">
         </div>
         <div class="search-container">
             <input type="text" id="searchBar" placeholder="Search for places, activities...">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="actions">
-            <button class="review">Write a Review</button>
+            <button class="review" onclick="location.href='write-review.html'">Write a Review</button>
             <button class="plan">Plan Your Trip</button>
             <button class="login">Login</button>
             <button class="register">Register</button>
@@ -211,7 +245,7 @@
             <p>${place.desc}</p>
         </div>
         <div class="place-actions">
-            <button style="background-color: #FF5733; color: white;" onclick="location.href='place-detail.html'">Details</button>
+            <button style="background-color: #FF5733; color: white; font-family: Montserrat, sans-serif;" onclick="location.href='place-detail.html'">Details</button>
             <i class="fa-solid fa-bookmark" onclick="toggleBookmark(this)"></i>
         </div>
     `;
